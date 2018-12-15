@@ -22,5 +22,20 @@ impl fmt::Display for Point2D {
 }
 
 fn main() {
-    println!("Hello, world!");
+    let minmax = MinMax(0,14);
+
+    println!("Compare structures:");
+    println!("Display: {}", minmax);
+    println!("Debug: {:?}", minmax);
+
+    let big_range = MinMax(-300, 300);
+    let small_range = MinMax(-3,3);
+
+    println!("The big range is {big} amd the small range is {small}", big = big_range, small = small_range );
+
+    let point = Point2D {x: 3.3, y: 7.2};
+
+    println!("Compare points:");
+    println!("Display: {}", point);
+    println!("Debug: {:?}", point);
 }

@@ -21,6 +21,19 @@ impl fmt::Display for Point2D {
     }
 }
 
+//activity
+#[derive(Debug)]
+struct Complex{
+    real: f64,
+    imag: f64,
+}
+
+impl fmt::Display for Complex {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "{re} + {im}i", re=self.real, im=self.imag)
+    }
+}
+
 fn main() {
     let minmax = MinMax(0,14);
 
@@ -38,4 +51,10 @@ fn main() {
     println!("Compare points:");
     println!("Display: {}", point);
     println!("Debug: {:?}", point);
+
+    //activity
+    let c = Complex {real: 3.3, imag: 7.2};
+
+    println!("Display: {}", c);
+    println!("Debug: {:?}", c);
 }

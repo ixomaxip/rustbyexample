@@ -26,7 +26,7 @@ struct Color {
 //activity
 impl Display for Color {
     fn fmt(&self, f: &mut Formatter) -> fmt::Result {
-        write!(f, "RGB ({r}, {g}, {b}) {r:#04X}{g:02X}{b:02X}",
+        write!(f, "RGB ({r}, {g}, {b}) 0x{r:02X}{g:02X}{b:02X}",
                     r = self.red,
                     g = self.green,
                     b = self.blue)
@@ -46,7 +46,7 @@ fn main() {
         Color { red: 0, green: 3, blue: 254 },
         Color { red: 0, green: 0, blue: 0 },
     ].iter() {
-        println!("{:?}", *color);
+        // println!("{:?}", *color);
         //activity
         println!("{}", *color);
     }

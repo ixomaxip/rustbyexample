@@ -1,0 +1,6 @@
+[package]
+name = "formatting"
+version = "0.1.0"
+authors = ["Max <max.white.rabbit@gmail.com>"]
+
+[dependencies]
